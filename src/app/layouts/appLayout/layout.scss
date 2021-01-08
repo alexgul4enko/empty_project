@@ -1,0 +1,23 @@
+@import "variables";
+
+.wrapper {
+  height: 100%;
+  background-color: $gray-100;
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+}
+
+.main {
+  overflow: auto;
+}
+
+.header {
+  height: $header-height;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+}
