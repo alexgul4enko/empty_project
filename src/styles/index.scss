@@ -1,16 +1,14 @@
 @import "./variables.scss";
 @import "../fonts/Lato/lato.css";
 
-:global {
-  html,
-  body,
-  #root {
-    height: 100%;
-    display: block;
-    margin: 0;
-    font-family: "Lato", sans-serif;
-    font-size: 16px;
-    font-weight: normal;
-    color: $gray-800;
-  }
+html,
+body,
+#root {
+  height: 100%;
+  display: block;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  color: $gray-800;
 }

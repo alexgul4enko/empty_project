@@ -1,4 +1,5 @@
-import LoginForm from './login'
+import { Suspense, lazy } from 'react'
+const LoginForm = lazy(() => import('./login'))
 
 const routes = [
   {
@@ -11,7 +12,7 @@ const routes = [
       },
       {
         path: '/login',
-        component: LoginForm,
+        component: () => <Suspense fallback={<div>Loading...</div>}><LoginForm/></Suspense>,
         name: 'login',
       },
     ],

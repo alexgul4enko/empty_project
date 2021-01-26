@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types'
 import { Link } from '@cranium/router'
-import styles from './layout.scss'
+import styles from './layout.module.scss'
 import logo from '@img/example.png'
+
+console.log(styles)
 
 AppLayout.propTypes = {
   children: PropTypes.node,

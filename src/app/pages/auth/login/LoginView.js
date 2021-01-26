@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import { TextField } from 'common/forms'
-import classNames from './login.scss'
+import classNames from './login.module.scss'
 
 
 LoginView.propTypes = {

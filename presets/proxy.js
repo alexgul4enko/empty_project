@@ -1,17 +1,4 @@
-import { devServer, env, group } from 'webpack-blocks'
-
-
-export default function(config) {
-  return group([
-    env('development', [
-      devServer({
-        proxy: configureProxy(),
-      }),
-    ]),
-  ])
-}
-
-function configureProxy() {
+export default function configureProxy() {
   const ret = [
     // proxy API and other paths from env.PROXY
     makeProxyContext(JSON.parse(process.env.PROXY), process.env.PROXY_URL),
@@ -35,6 +22,7 @@ function makeProxyContext(paths, targetUrl) {
   return {
     secure: false,
     logLevel: 'debug',
+    hot: true,
     changeOrigin: true,
     headers: { host: urlData.host, referer: urlData.origin },
     auth: urlData.auth,
@@ -62,7 +50,7 @@ function makeRouter(urlData) {
 
 function bypass(req, res, urlData) {
   if(req.headers && req.headers.referer) {
-    var url = new URL(req.headers.referer)
+    const url = new URL(req.headers.referer)
     url.host = urlData.host
     url.protocol = urlData.protocol
     url.port = ''

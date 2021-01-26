@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import styled from './not-found.scss'
+import styles from './not-found.module.scss'
 
 export default function NotFound() {
   return (

@@ -1,11 +1,8 @@
 import { render } from 'react-dom'
-// import store from './init'
-// import App from './App'
+import App from './App'
+import store from './init'
 
-function App() {
-  return <h1>as2ee33</h1>
-}
 render(
-  <App />,
+  <App store={store}/>,
   document.getElementById('root'),
 )

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { useMemo } from 'react'
 import cx from 'common/utils/cx'
-import styles from './layout.scss'
+import styles from './layout.module.scss'
 
 
 BaseFieldLayout.propTypes = {
